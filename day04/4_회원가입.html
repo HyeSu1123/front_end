@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="icon" href="./icon.ico">
+</head>
+<body>
+    <h2>회원가입</h2>
+    <!-- 회원가입 폼 만들기(기능은 빼고 틀만) -->
+    <!-- 아이디, 비밀번호, 비밀번호 확인, 이름, 핸드폰, 이메일, 성별, 취미, 우편번호, 주소, 상세주소, 참고항목, 가입완료, 다시작성 -->
+    <form action="regist.html">
+        <p>
+            <input type="text" placeholder="아이디를 입력해주세요" maxlength="12" required>
+        </p>
+        <p>
+            <input type="password" placeholder="비밀번호를 입력해주세요" size="25" required>
+            <input type="button" value="확인" onclick="alert('확인되었습니다.')">
+        </p>
+        <p>
+            <input type="text" placeholder="이름을 입력해주세요." required>
+        </p>
+        <p>
+            <select name="number" >
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="02">02</option>
+            </select>
+            <input type="tel" placeholder="핸드폰 번호를 입력해주세요." required><br>
+            <input type="text"readonly value="예시)0000-0000" size=13">
+        </p>
+        <p>
+            <input type="text" >@
+            <input type="search" list="email"><br>
+            <input type="email" readonly value="예시)abc@naver.com" size="17">
+            <datalist id="email">
+                <option value="naver.com" label="네이버"></option>
+                <option value="gmail.com">구글</option>
+                <option value="daum.net">다음</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="m">남자</label><input type="radio" name="gender" id="m" checked value="m"><br>
+            <label for="w">여자</label><input type="radio" name="gender" id="w" value="w">
+        </p>
+        <p>
+            <fieldset>
+                <legend>좋아하는 취미생활은 무엇인가요(중복선택 가능)</legend>
+                게임하기<input type="checkbox" >
+                뜨개질하기<input type="checkbox" >
+                그림그리기<input type="checkbox" >
+                책읽기<input type="checkbox" ><br>
+                운동하기<input type="checkbox" >
+                꽃꽂이하기<input type="checkbox" >
+                덕질하기<input type="checkbox" >
+                간식먹기<input type="checkbox" >
+            </fieldset>
+        </p>
+        <p>
+            <input type="text" placeholder="주소" required>
+            <input type="button" value="우편번호 찾기"><br>
+            <textarea name="" id="" cols="30" rows="4" style="resize: none;" placeholder="상세주소를 입력해주세요"></textarea>
+        </p>
+        <p>
+            <fieldset>
+                <legend>참고항목</legend>
+                1. 수집하는 개인정보 항목 : 회원가입, 상담, 서비스신청 등을 위해 아래와 같은
+개인정보를 수집하고 있습니다.<br>
+△ 수집항목 : 이름, 주민등록번호, 휴대전화번호, 사진, 비밀번호, 직책, 회사명
+자택/직장 전화번호, 자택/직장 주소, 이메일, 팩스번호,
+접속로그, IP정보 등이 생성되어 수집될 수 있습니다.<br>
+ △ 개인정보 수집방법 : 홈페이지, 서면양식<br>
+2. 개인정보의 수집 및 이용목적<br>
+△ 회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+△ 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산, 구매 및
+요금 결제, 물품배송 또는 청구지 등 발송<br>
+△ 회원 관리 : 회원제 서비스 이용에 따른 본인확인, 개인 식별, 고지사항 전달<br>
+△ 마케팅 및 광고에 활용 : 이벤트 등 광고성 정보 전달<br>
+3. 개인정보의 보유 및 이용기간<br>
+회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+△ 보존항목 : 이름, 주민등록번호, 직장/자택 주소, 직장/자택 전화번호, 휴대전화번호<br>
+△ 보존근거 : 고객지원 및 회원권 관리 △ 보존기간 : 5년
+            </fieldset><br>
+            <fieldset>
+                <label for="ok">동의<input type="radio" name="select" id="ok" checked value="ok"></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="no">동의하지 않음<input type="radio" name="select" id="no" value="no"></label>
+            </fieldset>
+        </p>
+        <p>
+            <input type="submit" value="가입완료!">
+        </p>
+        <p>
+            <input type="reset" value="다시 작성하기">
+        </p>
+    </form>
+</body>
+</html>
