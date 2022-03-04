@@ -1,0 +1,10 @@
+.contetn1 {
+  float: right;
+}
+.contetn2 {
+  float: left;
+}
+.contetn3{
+  float: none;
+  padding-top: 20px;
+}

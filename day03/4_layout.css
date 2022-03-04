@@ -1,0 +1,74 @@
+div.static { /*위치가 있는 요소: 정적; 특별한 방식으로 배치되지 않습니다. 항상 페이지의 정상적인 흐름에 따라 배치됩니다.*/
+  position: static;
+  border: 3px solid #73AD21;
+}
+div.relative { /*위치가 있는 요소: 상대; 정상 위치를 기준으로 배치됩니다.*/
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+  } 
+div.fixed {/*위치가 있는 요소: fixed; 뷰포트에 상대적으로 위치하므로 페이지가 스크롤되더라도 항상 같은 위치에 유지됩니다.*/
+ /* position: fixed;
+  bottom: 40;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;*/
+}
+div.absolute { /*위치가 있는 요소: 절대; 가장 가까운 위치의 조상을 기준으로 배치됩니다(고정처럼 뷰포트에 상대적으로 배치되는 대신):*/
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+div.sticky { /*top: 0이 예에서 고정 요소 는 스크롤 위치에 도달하면 페이지 상단( )에 고정됩니다.*/
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px; /*숫자가 커질수록 아래로*/
+  left: 16px; /*숫자가 커질수록 오른쪽으로*/
+  font-size: 18px;
+}
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
