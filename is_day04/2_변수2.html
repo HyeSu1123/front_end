@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let v1 = 123; document.write(v1);
+   document.write('<br>'); /*태그도 적용되어 출력한다.*/
+   let v2 = 999; document.write(v2); /*let으로 선언하면 변수명이 겹치면서 오류 */
+   if(10>5){
+     let v1=444;  /*일반적인 프로그래밍언어는 if블럭의 지역변수 자바스크립트는 var은 전역변수 취급(함수 제외)*/
+     document.write('<br>블럭 내부 v1:'+v1)
+   }
+   document.write('<br>'+v1); /*let 선언 : { }블럭 scope 변수의 사용범위가 적용*/
+   const c1=123; /*상수 선언 식별자에 지정된 값을 변경할 수 없다.*/
+   /*c1=999; 오류 : 값의 재할당 못한다.*/
+   v1 = '핳핳핳'; /*v1 변수에 재할당된 데이터의 형식이 달라질 수 있다. (999 정수에서 문자열로 바뀜)*/
+   document.write('<br>'+v1);
+   
+  </script>
+</body>
+</html>
