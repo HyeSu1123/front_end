@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    th,tr,td{
+      border: 2px solid coral;
+      text-align: center;
+      width: 70px;
+      padding: 10px;
+    }
+    th{
+      background: coral;
+      color: aliceblue;
+    }
+    #Time{
+      font-weight: bold;
+    }
+    td:nth-child(4){
+      background:rgb(166, 229, 216);
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr id="Time">
+      <!-- 시간 나열, time 배열값 td 태그안에 넣어서 -->
+    </tr>
+    <tr id="Todo">
+      <!-- 할일을 나열, todo 배열값을 td 태그안에 넣어서 -->
+    </tr>
+  </table>
+  <script>
+    const time=['09:00','11:00','12:30','14:00','16:45']
+    const todo=['수업','과제','점심식사','주간회의','자료조사']
+    //시간표 테이블 forEach메소드, 콜백함수 활용
+    let _time = '<th>TIME</th>'
+    time.forEach(function(val){
+      _time += `<td>${val}</td>`
+    })
+
+    let _todo = '<th>TODO</th>'
+    todo.forEach(function(val){
+      _todo += `<td>${val}</td>`
+    })
+    document.getElementById('Time').innerHTML=_time
+    document.getElementById('Todo').innerHTML=_todo
+  </script>
+</body>
+</html>
