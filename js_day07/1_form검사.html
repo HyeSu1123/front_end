@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" name="frmUser">
+    이름 : <input type="text" name="user"><br> <!--elements[0]-->
+    이메일 : <input type="text" name="email">    <!--elements[1]-->
+    <button type="submit">전송</button>
+    <button onclick="data_check()">데이터 확인</button>
+    <!-- form태그 입력요소 값들을 자바스크립트에서 확인하는 테스트 -->
+  </form>
+  <script>
+    //form 태그 요소 가져오는 방법
+    //var selectForm = document.forms[index]; //form 태그 많을 때 순서가 index
+      //var selectFormElement = document.forms[index].elements[index];
+      //elements[index]는 form 태그 내부의 입력 요소들의 순서가 index
+    //var selectFormElementValue = selectFormElement.value; //value속성이 입력값이다.
+    function data_check(){
+      alert('함수 실행되는지 확인')
+      console.log('1.forms,elements 객체 이용해서 input값 가져오기')
+      const $user = document.forms[0].elements[0];
+      const $email = document.forms[0].elements[1];
+      console.log('입력 user 이름 : ' + $user.value)
+      console.log('입력 email : ' + $email.value)
+      console.log('2.name 속성값을 이용해서 input값 가져오기')
+      const $user2 = document.frmUser.user
+      const $email2 = document.frmUser.email
+      console.log('입력 user 이름2 : ' + $user2.value)
+      console.log('입력 email2 : ' + $email2.value)
+    }
+  </script>
+</body>
+</html>
