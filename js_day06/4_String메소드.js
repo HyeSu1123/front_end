@@ -1,10 +1,23 @@
 let text = "John Doe"
 console.log(text)
 
+//문자열을 둘러싼 따옴표와 일치하지 않는 한 문자열 안에 따옴표를 사용할 수 있습니다.
+let answer1 = "It's alrigth"
+let answer2 = "He is called 'Johnny'"
+let answer3 = 'Heis called "Jphnny"'
+console.log(answer1)
+console.log(answer2)
+console.log(answer3)
+
 let txt = "ABCDEFGHIGKLMNOPQRSTUVWXYZ"
 let length = txt.length  //length속성은 문자열의 길이를 반환합니다.
 console.log(length)
 
+let answer4 = "We are the so-called\n\"Viskings\" from the \'north\'"
+console.log(answer4)
+
+
+/**중요 */
 let str = "Apple, Banana, Kiwi"
 let part = str.slice(7,13)
 console.log(part)
@@ -109,3 +122,4 @@ console.log(char)
 char = text.charCodeAt(10)
 console.log(char)
 
+//문자열 검색 메소드 : 사용형식은 자바와 동일.

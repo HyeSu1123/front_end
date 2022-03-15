@@ -9,7 +9,7 @@
 let person = {
   name : 'sana',age:19,
     sayHi : function(){//메소드 정의 : 객체의 프로퍼티값이 함수 정의일 때 메소드이다.
-      console.log(`Hi!!나는 ${this.name}예요~`)
+      console.log(`Hi!!나는 ${this.name}예요~`) //this는 person변수가 참조하는 객체
   }
 } //객체 리터럴을 이용하여 객체 생성
 
